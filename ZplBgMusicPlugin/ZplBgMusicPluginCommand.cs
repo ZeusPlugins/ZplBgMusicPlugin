@@ -44,15 +44,16 @@ namespace YoYoStudio
                 {
                     int arg = (_desktopId < 0) ? IDE.MasterDesktopID : _desktopId;
 
-                    // usually both the WindowManager property and GetDesktopDetails method are marked as `internal`
+                    WindowManager wm = (WindowManager)IdeInterface
+                        .WindowManager
+                        .GetType()
+                        .GetField("m_WindowManager", BindingFlags.Instance | BindingFlags.NonPublic)
+                        .GetValue(IdeInterface.WindowManager);
+
+                    // usually the GetDesktopDetails method is marked as `internal`
                     // BUT, for Russian Catboys, there is no such thing as `internal` everything is public.
-
-                    WindowManager wm = (WindowManager)typeof(IDE)
-                        .GetProperty("WindowManager", BindingFlags.Static | BindingFlags.NonPublic)
-                        .GetMethod
-                        .Invoke(null, new object[] { });
-
-                    DesktopDetails details = (DesktopDetails)typeof(WindowManager)
+                    DesktopDetails details = (DesktopDetails)wm
+                        .GetType()
                         .GetMethod("GetDesktopDetails", BindingFlags.Instance | BindingFlags.NonPublic)
                         .Invoke(wm, new object[] { arg });
 
@@ -211,7 +212,7 @@ namespace YoYoStudio
                 {
                     IOpenFileDialog iofd = FileSystem.OpenFileDialog();
                     iofd.Title = Language.GetString("ZBMP_Open");
-                    iofd.Filters.Add(new Tuple<string, string>(Language.GetString("ZBMP_Filter"), "*.mp3;*.ogg;*.wav"));
+                    iofd.Filters.Add(new Tuple<string, string>(Language.GetString("ZBMP_Filter"), "*.mp3;*.ogg;*.wav;*.flac"));
                     iofd.Filters.Add(new Tuple<string, string>(Language.GetString("ZBMP_All"), "*")); // 'All Files' filter
                     iofd.ShowDialog(OnFileOpen, OnFileError);
                 }
