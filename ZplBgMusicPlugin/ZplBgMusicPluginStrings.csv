@@ -1,0 +1,15 @@
+﻿Name,English,Translation,Restrictions,Comment
+_Language,English,English,,Language name - in English
+_LanguageNative,English,English,,Language name in the native language
+_LanguageCode,en,en,,standard windows os language code this pack represents (can be primary code only ie. en or primary-secondary ie. en-GB)
+ZBMP_Title,Music Player,Music Player,,menu bar title
+ZBMP_Play,Play...,Play...,,play button title
+ZBMP_Stop,Stop,Stop,,stop button title
+ZBMP_Pause,Pause,Pause,,pause button title
+ZBMP_Resume,Resume,Resume,,resume button title
+ZBMP_Open,Choose an audiofile...,Choose an audiofile...,,open filedialog title
+ZBMP_All,All files,All files,,open filedialog filter
+ZBMP_Filter,Audiofiles,Audiofiles,,open filedialog all files filter
+ZBMP_Panel_Idle,Idle,Idle,,panel text when idle
+ZBMP_Panel_Playing,Playing {0},Playing {0},,first format argument is filename without extension
+ZBMP_Panel_Paused,Paused,Paused,,panel text when paused

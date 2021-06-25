@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ZplBgMusicPluginLayout" layout_guid="b741ba1a-19ac-47cb-bdad-51670f129eae">
+    <MenuBar stylename="menu_bar" layout_id="menu_bar" layout_guid="7011eadf-439c-484a-b7f9-067b1a32b0e1" top="241dpi_px">
+      <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_zplbgmusicplugin_bar" layout_guid="25ff9f73-6211-4b2b-9133-48ed00de8bd2" width="241dpi_px" left="0dpi_px" localise_name="ZBMP_Title">
+        <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+          <MenuEntry stylename="menu_entry" layout_id="menu_play_audio" layout_guid="6a8394c9-b5bf-4ba2-b03a-6370a12259f7" localise_name="ZBMP_Play" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_stop_audio" layout_guid="fa2532bd-7580-4c6d-a9d7-243286ba8628" localise_name="ZBMP_Stop" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_pause_audio" layout_guid="26580360-7115-4f66-a669-a29207efd4b1" localise_name="ZBMP_Pause" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_resume_audio" layout_guid="a202b265-68a3-4fdb-bdf1-810a07b837b6" localise_name="ZBMP_Resume" />
+        </ContextMenu>
+      </MenuBarEntry>
+    </MenuBar>
+  </Layout>
+</Layouts>
