@@ -1,14 +1,9 @@
 ﻿using Core.CoreOS.FileAPI;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using YoYoStudio.Core.Utils;
 using YoYoStudio.FileAPI;
-using YoYoStudio.Graphics;
 using YoYoStudio.GUI;
 using YoYoStudio.GUI.Gadgets;
 using YoYoStudio.GUI.Layout;
@@ -27,6 +22,7 @@ namespace YoYoStudio
                 private bool LayoutFailed { get; set; }
                 private string PluginDirectory { get; set; }
                 private ModulePackage IdeInterface { get; set; }
+                public ModulePackage Package => IdeInterface;
                 private string MenuId { get; set; }
                 private SoundInstance MusicInstance { get; set; }
                 private float MusicVolume { get; set; }
