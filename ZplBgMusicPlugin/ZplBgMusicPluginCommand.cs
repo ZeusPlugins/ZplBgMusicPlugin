@@ -179,19 +179,20 @@ namespace YoYoStudio
                     UpdateButtonState();
                 }
 
+                public void OnStartPlay()
+                {
+                    SetLabelText(Language.GetString("ZBMP_Panel_Playing", FileName));
+                    // here the state is not set to PLAYING, but we already know that the sound WILL play.
+                    UpdateButtonState(true);
+                }
+
                 public void OnFileOpen(object _result, object _userData)
                 {
                     StopSound();
                     FileName = Path.GetFileNameWithoutExtension((string)_result);
 
                     MusicInstance = new SoundInstance((string)_result, false, MusicVolume);
-                    MusicInstance.OnStartPlay +=
-                        () =>
-                        {
-                            SetLabelText(Language.GetString("ZBMP_Panel_Playing", FileName));
-                            // here the state is not set to PLAYING, but we already know that the sound WILL play.
-                            UpdateButtonState(true);
-                        };
+                    MusicInstance.OnStartPlay += OnStartPlay;
 
                     SoundInstance.Loop(MusicInstance); // set instance as looped.
                     SoundInstance.Play(MusicInstance); // and play it!

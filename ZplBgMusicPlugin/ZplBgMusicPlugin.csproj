@@ -49,20 +49,15 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Graphics, Version=2.3.2.560, Culture=neutral, PublicKeyToken=83c29ed24e39e35e, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Games\Steam\steamapps\common\GameMaker Studio 2 Desktop\Graphics.dll</HintPath>
-    </Reference>
     <Reference Include="IDE">
-      <HintPath>..\..\..\..\..\Games\Steam\steamapps\common\GameMaker Studio 2 Desktop\IDE.dll</HintPath>
+      <HintPath>..\..\..\..\..\Progs\GameMakerStudio\23\IDE\IDE.dll</HintPath>
     </Reference>
-    <Reference Include="OSCore, Version=2.3.2.560, Culture=neutral, PublicKeyToken=83c29ed24e39e35e, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Games\Steam\steamapps\common\GameMaker Studio 2 Desktop\OSCore.dll</HintPath>
+    <Reference Include="OSCore">
+      <HintPath>..\..\..\..\..\Progs\GameMakerStudio\23\IDE\OSCore.dll</HintPath>
     </Reference>
     <Reference Include="System.XML" />
     <Reference Include="Utils">
-      <HintPath>..\..\..\..\..\Games\Steam\steamapps\common\GameMaker Studio 2 Desktop\Utils.dll</HintPath>
+      <HintPath>..\..\..\..\..\Progs\GameMakerStudio\23\IDE\Utils.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
